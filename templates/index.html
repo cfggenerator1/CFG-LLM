@@ -20,6 +20,9 @@
     {% if cfg_image %}
     <div class="result">
         <h2>Generated CFG</h2>
+         {% if user_input %}
+                    <p class="user-input"><strong>Prompt:</strong> {{ user_input }}</p>
+                {% endif %}
         <img src="data:image/png;base64,{{ cfg_image }}" alt="Control Flow Graph">
         
         <h3>Metrics:</h3>
